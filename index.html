@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quittungs-App (Prototyp)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>QuittungsApp (Prototyp)</h1>
+
+  <form id="quittungForm">
+    <label for="titel">Titel:</label>
+    <input type="text" id="titel" required />
+
+    <label for="betrag">Betrag (CHF):</label>
+    <input type="number" id="betrag" required />
+
+    <button type="button" id="startCamera">Kamera starten</button>
+    <video id="video" autoplay playsinline></video>
+    <button type="button" id="takePhoto">Foto aufnehmen</button>
+    <canvas id="canvas" style="display:none;"></canvas>
+
+    <button type="submit">Quittung speichern</button>
+  </form>
+
+  <label for="sort">Sortieren nach:</label>
+  <select id="sort">
+    <option value="desc">Neueste zuerst</option>
+    <option value="asc">Älteste zuerst</option>
+  </select>
+
+  <h2>Gespeicherte Quittungen</h2>
+  <div id="liste"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
